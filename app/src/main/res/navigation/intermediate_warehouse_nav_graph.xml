@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intermediate_warehouse_nav_graph"
+    app:startDestination="@id/intermediateWarehouseMenuFragment">
+
+    <fragment
+        android:id="@+id/intermediateWarehouseMenuFragment"
+        android:name="net.gbs.schneider.Ui.Menus.IntermediateWarehouseMenuFragment"
+        android:label="fragment_intermediate_warehouse_menu"
+        tools:layout="@layout/fragment_intermediate_warehouse_menu" >
+        <action
+            android:id="@+id/action_intermediateWarehouseMenuFragment_to_intermediate_receive_nav_graph"
+            app:destination="@id/intermediate_receive_nav_graph" />
+        <action
+            android:id="@+id/action_intermediateWarehouseMenuFragment_to_intermediateIssueWorkOrdersListFragment"
+            app:destination="@id/intermediateIssueWorkOrdersListFragment" />
+        <action
+            android:id="@+id/action_intermediateWarehouseMenuFragment_to_intermediateReturnMenuFragment"
+            app:destination="@id/intermediateReturnMenuFragment" />
+    </fragment>
+    <include app:graph="@navigation/intermediate_receive_nav_graph" />
+    <fragment
+        android:id="@+id/intermediateIssueWorkOrdersListFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateIssue.IntermediateIssueWorkOrdersList.IntermediateIssueWorkOrdersListFragment"
+        android:label="fragment_intermediate_issue_work_orders_list"
+        tools:layout="@layout/fragment_intermediate_issue_work_orders_list" >
+        <action
+            android:id="@+id/action_intermediateIssueWorkOrdersListFragment_to_intermediateStartIssueFragment"
+            app:destination="@id/intermediateStartIssueFragment" />
+        <action
+            android:id="@+id/action_intermediateIssueWorkOrdersListFragment_to_intermediateIssueWorkOrderDetailsListFragment"
+            app:destination="@id/intermediateIssueWorkOrderDetailsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intermediateStartIssueFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateIssue.IntermediateStartIssue.IntermediateStartIssueFragment"
+        android:label="fragment_intermediate_start_issue"
+        tools:layout="@layout/fragment_intermediate_start_issue" />
+    <fragment
+        android:id="@+id/intermediateIssueWorkOrderDetailsListFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateIssue.IntermediateWorkOrderDetailsList.IntermediateIssueWorkOrderDetailsListFragment"
+        android:label="fragment_intermediate_issue_work_order_details_list"
+        tools:layout="@layout/fragment_intermediate_issue_work_order_details_list" />
+    <fragment
+        android:id="@+id/intermediateReturnMenuFragment"
+        android:name="net.gbs.schneider.Ui.Menus.IntermediateReturnMenuFragment"
+        android:label="fragment_intermediate_return_menu"
+        tools:layout="@layout/fragment_intermediate_return_menu" >
+        <action
+            android:id="@+id/action_intermediateReturnMenuFragment_to_intermediateReceiveReturnWorkOrdersListFragment2"
+            app:destination="@id/intermediateReceiveReturnWorkOrdersListFragment2" />
+        <action
+            android:id="@+id/action_intermediateReturnMenuFragment_to_intermediatePutAwayReturnWorkOrdersListFragment"
+            app:destination="@id/intermediatePutAwayReturnWorkOrdersListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intermediateReturnStartPutAwayFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReturn.IntermediatePutAwayReturn.IntermediateReturnStartPutAway.IntermediateReturnStartPutAwayFragment"
+        android:label="fragment_intermediate_return_start_put_away"
+        tools:layout="@layout/fragment_intermediate_return_start_put_away" />
+    <fragment
+        android:id="@+id/intermediateReceiveReturnWorkOrdersListFragment2"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReturn.IntermediateReceiveReturn.IntermediateReceiveReturnWorkOrdersList.IntermediateReceiveReturnWorkOrdersListFragment"
+        android:label="fragment_intermediate_receive_return_work_orders_list"
+        tools:layout="@layout/fragment_intermediate_receive_return_work_orders_list" >
+        <action
+            android:id="@+id/action_intermediateReceiveReturnWorkOrdersListFragment2_to_intermediateReturnStartReceivingFragment"
+            app:destination="@id/intermediateReturnStartReceivingFragment" />
+        <action
+            android:id="@+id/action_intermediateReceiveReturnWorkOrdersListFragment2_to_intermediateReturnWorkOrderDetailsListFragment"
+            app:destination="@id/intermediateReturnWorkOrderDetailsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intermediatePutAwayReturnWorkOrdersListFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReturn.IntermediatePutAwayReturn.IntermediatePutAwayReturnWorkOrdersList.IntermediatePutAwayReturnWorkOrdersListFragment"
+        android:label="fragment_intermediate_put_away_return_work_orders_list"
+        tools:layout="@layout/fragment_intermediate_put_away_return_work_orders_list" >
+        <action
+            android:id="@+id/action_intermediatePutAwayReturnWorkOrdersListFragment_to_intermediateReturnStartPutAwayFragment"
+            app:destination="@id/intermediateReturnStartPutAwayFragment" />
+        <action
+            android:id="@+id/action_intermediatePutAwayReturnWorkOrdersListFragment_to_intermediateReturnWorkOrderDetailsListFragment"
+            app:destination="@id/intermediateReturnWorkOrderDetailsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intermediateReturnStartReceivingFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReturn.IntermediateReceiveReturn.IntermediateReturnStartReceiving.IntermediateReturnStartReceivingFragment"
+        android:label="fragment_intermediate_return_start_receiving"
+        tools:layout="@layout/fragment_intermediate_return_start_receiving" />
+    <fragment
+        android:id="@+id/intermediateReturnWorkOrderDetailsListFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReturn.IntermediateReturnWorkOrdersDetailsList.IntermediateReturnWorkOrderDetailsListFragment"
+        android:label="IntermediateReturnWorkOrderDetailsListFragment" />
+</navigation>

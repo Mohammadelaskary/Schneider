@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Ui.Menus.MainMainMenuFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/main_warehouse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/main_warehouse" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/intermediate_warehouse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/intermediate_warehouse" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bin_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/bin_info" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/item_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/item_info" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/serial_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/serial_info" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/report" />
+
+
+</LinearLayout>

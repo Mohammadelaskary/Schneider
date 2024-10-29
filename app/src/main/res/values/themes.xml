@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Schneider" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/logo_green</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
+
+    <style name="Theme.Schneider" parent="Base.Theme.Schneider" />
+
+    <style name="alerter_text_appearance">
+        <item name="android:textColor">#fff</item>
+    </style>
+</resources>

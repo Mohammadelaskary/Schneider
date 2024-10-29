@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="logo_green">#019e4f</color>
+    <color name="light_green">#2BD6B0</color>
+    <color name="baby_blue">#3BE4ED</color>
+    <color name="blue">#2BA2D6</color>
+    <color name="darker_blue">#3187F7</color>
+    <color name="alerter_success_color">#4CAF50</color>
+    <color name="alerter_error_color">#D32F2F</color>
+    <color name="grey">#7C7B7B</color>
+    <color name="green">#6DDD0C</color>
+    <color name="removed_serial_stroke_color">#FFE20A0A</color>
+    <color name="removed_serial_background_color">#AEE20A0A</color>
+    <color name="original_serial_stroke_color">#06800D</color>
+    <color name="original_serial_background_color">#7E06800D</color>
+    <color name="new_serial_stroke_color">#5A5A5B</color>
+    <color name="new_serial_background_color">#8B5A5A5B</color>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/intermediate_receive_nav_graph"
+    app:startDestination="@id/intermediateReceivingMenuFragment">
+
+    <fragment
+        android:id="@+id/intermediateReceivingMenuFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReceiving.IntermediateReceivingMenu.IntermediateReceivingMenuFragment"
+        android:label="fragment_intermediate_receiving_menu"
+        tools:layout="@layout/fragment_intermediate_receiving_menu" >
+        <action
+            android:id="@+id/action_intermediateReceivingMenuFragment_to_receivingWorkOrderListFragment"
+            app:destination="@id/receivingWorkOrderListFragment" />
+        <action
+            android:id="@+id/action_intermediateReceivingMenuFragment_to_putAwayWorkOrderListFragment"
+            app:destination="@id/putAwayWorkOrderListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receivingWorkOrderListFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReceiving.IntermediateReceivingFragments.IntermediateReceivingWorkOrdersList.ReceivingWorkOrderListFragment"
+        android:label="fragment_receiving_work_order_list"
+        tools:layout="@layout/fragment_receiving_work_order_list" >
+        <action
+            android:id="@+id/action_receivingWorkOrderListFragment_to_intermediateStartReceivingFragment"
+            app:destination="@id/intermediateStartReceivingFragment" />
+        <action
+            android:id="@+id/action_receivingWorkOrderListFragment_to_intermediateWorkOrderDetailsFragment"
+            app:destination="@id/intermediateWorkOrderDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intermediateStartReceivingFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReceiving.IntermediateReceivingFragments.IntermediateReceivingStartReceiving.IntermediateStartReceivingFragment"
+        android:label="fragment_intermdiate_start_receiving"
+        tools:layout="@layout/fragment_intermdiate_start_receiving" />
+    <fragment
+        android:id="@+id/intermediateWorkOrderDetailsFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReceiving.IntermediateWorkOrderDetails.IntermediateWorkOrderDetailsFragment"
+        android:label="fragment_intermediate_work_order_details"
+        tools:layout="@layout/fragment_intermediate_work_order_details" />
+    <fragment
+        android:id="@+id/putAwayWorkOrderListFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReceiving.IntermediatePutAwayFragments.IntermediatePutAwayWorkOrdersList.PutAwayWorkOrderListFragment"
+        android:label="PutAwayWorkOrderListFragment" >
+        <action
+            android:id="@+id/action_putAwayWorkOrderListFragment_to_intermediateFastPutAwayFragment"
+            app:destination="@id/intermediateFastPutAwayFragment" />
+        <action
+            android:id="@+id/action_putAwayWorkOrderListFragment_to_intermediateDetailedPutAwayFragment"
+            app:destination="@id/intermediateDetailedPutAwayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/intermediateFastPutAwayFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReceiving.IntermediatePutAwayFragments.IntermediateFastPutAway.IntermediateFastPutAwayFragment"
+        android:label="fragment_intermediate_fast_put_away"
+        tools:layout="@layout/fragment_intermediate_fast_put_away" />
+    <fragment
+        android:id="@+id/intermediateDetailedPutAwayFragment"
+        android:name="net.gbs.schneider.Ui.IntermediateWarehouse.IntermediateReceiving.IntermediatePutAwayFragments.IntermediateDetailedPutAway.IntermediateDetailedPutAwayFragment"
+        android:label="fragment_intermediate_detailed_put_away"
+        tools:layout="@layout/fragment_intermediate_detailed_put_away" />
+</navigation>

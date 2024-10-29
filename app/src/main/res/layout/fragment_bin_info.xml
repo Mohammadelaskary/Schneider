@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Ui.GetBinInfo.BinInfoFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bin_code"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:boxCornerRadiusTopStart="55dp"
+        app:boxCornerRadiusBottomEnd="55dp"
+        app:boxCornerRadiusTopEnd="55dp"
+        app:boxCornerRadiusBottomStart="55dp"
+        app:endIconDrawable="@drawable/icon_search"
+        app:endIconMode="custom"
+        app:startIconDrawable="@drawable/ic_barcode_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/bin_code"
+            android:imeOptions="actionGo"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bin_code"
+        app:layout_constraintStart_toStartOf="@+id/bin_code"
+        app:layout_constraintTop_toBottomOf="@+id/bin_code" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

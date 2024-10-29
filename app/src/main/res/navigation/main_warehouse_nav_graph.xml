@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_warehouse_nav_graph"
+    app:startDestination="@id/mainMenuFragment2">
+    <action
+        android:id="@+id/action_mainMenuFragment2_to_auditOrdersListFragment"
+        app:destination="@id/auditOrdersListFragment" />
+    <action
+        android:id="@+id/action_mainMenuFragment2_to_receivingMenuFragment"
+        app:destination="@id/receivingMenuFragment"
+        app:enterAnim="@anim/push_right_in"
+        app:exitAnim="@anim/push_down_out"
+        app:popEnterAnim="@anim/push_right_in"
+        app:popExitAnim="@anim/push_up_out" />
+    <action
+        android:id="@+id/action_mainMenuFragment2_to_issueMenuFragment"
+        app:destination="@id/issueMenuFragment" />
+    <fragment
+        android:id="@+id/mainMenuFragment2"
+        android:name="net.gbs.schneider.Ui.Menus.MainWarehouseMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment2_to_issueMenuFragment"
+            app:destination="@id/issueMenuFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment2_to_auditOrdersListFragment"
+            app:destination="@id/auditOrdersListFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment2_to_returnMenuFragment"
+            app:destination="@id/returnMenuFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment2_to_POPlantMenuFragment"
+            app:destination="@id/POPlantMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receivingMenuFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.ReceivingMenuFragment"
+        android:label="fragment_receiving_menu"
+        tools:layout="@layout/fragment_receiving_menu">
+        <action
+            android:id="@+id/action_receivingMenuFragment_to_PO_InvoiceListFragment"
+            app:destination="@id/PO_InvoiceListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/POPlantMenuFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.POPlantMenuFragment"
+        android:label="POPlantMenuFragment">
+        <action
+            android:id="@+id/action_POPlantMenuFragment_to_invoiceListPutAwayFragment"
+            app:destination="@id/invoiceListPutAwayFragment" />
+        <action
+            android:id="@+id/action_POPlantMenuFragment_to_changeSerialsPO_InvoiceListFragment"
+            app:destination="@id/changeSerialsPO_InvoiceListFragment" />
+        <action
+            android:id="@+id/action_POPlantMenuFragment_to_receivingMenuFragment2"
+            app:destination="@id/receivingMenuFragment" />
+
+    </fragment>
+    <action
+        android:id="@+id/action_POVendorMenuFragment_to_POVendorListPutAwayFragment"
+        app:destination="@id/POVendorListPutAwayFragment" />
+    <fragment
+        android:id="@+id/startChangingSerialsFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.POPlant.InvoiceList.StartReceiving.StartChangingSerialsFragment.StartChangingSerialsFragment"
+        android:label="StartChangingSerialsFragment" />
+    <fragment
+        android:id="@+id/putAwayInvoiceListReturnFragment"
+        android:name="net.gbs.schneider.Ui.Return.PutAway.InvoiceList.PutAwayInvoiceListReturnFragment"
+        android:label="PutAwayInvoiceListReturnFragment">
+        <action
+            android:id="@+id/action_putAwayInvoiceListReturnFragment_to_startPutAwayReturnFragment2"
+            app:destination="@id/startPutAwayReturnFragment2" />
+        <action
+            android:id="@+id/action_putAwayInvoiceListReturnFragment_to_returnWorkOrderDetailsListFragment"
+            app:destination="@id/returnWorkOrderDetailsListFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_mainMenuFragment2_to_returnMenuFragment"
+        app:destination="@id/returnMenuFragment" />
+    <action
+        android:id="@+id/action_POPlantMenuFragment_to_changeSerialsPO_InvoiceListFragment"
+        app:destination="@id/changeSerialsPO_InvoiceListFragment" />
+    <action
+        android:id="@+id/action_receivingMenuFragment_to_POPlantMenuFragment"
+        app:destination="@id/POPlantMenuFragment" />
+    <action
+        android:id="@+id/action_putAwayInvoiceListReturnFragment_to_returnWorkOrderDetailsListFragment"
+        app:destination="@id/returnWorkOrderDetailsListFragment" />
+    <action
+        android:id="@+id/action_invoiceListReturnFragment_to_startReturnFragment"
+        app:destination="@id/startReturnFragment" />
+    <fragment
+        android:id="@+id/issueWorkOrderDetailsListFragment"
+        android:name="net.gbs.schneider.Ui.Issue.IssueWorkOrderDetailsList.IssueWorkOrderDetailsListFragment"
+        android:label="fragment_issue_work_order_details_list"
+        tools:layout="@layout/fragment_issue_work_order_details_list" />
+    <action
+        android:id="@+id/action_receivingMenuFragment_to_POVendorMenuFragment"
+        app:destination="@id/POVendorMenuFragment" />
+    <action
+        android:id="@+id/action_PO_InvoiceListFragment_to_startReceivingFragment"
+        app:destination="@id/startReceivingFragment" />
+    <fragment
+        android:id="@+id/startPutAwayPOVendorFragment"
+        android:name="net.gbs.schneider.Ui.POVendor.PutAway.StartPutAway.StartPutAwayPOVendorFragment"
+        android:label="StartPutAwayPOVendorFragment" />
+    <action
+        android:id="@+id/action_POVendorListPutAwayFragment_to_vendorInvoiceDetailsListFragment"
+        app:destination="@id/vendorInvoiceDetailsListFragment" />
+    <fragment
+        android:id="@+id/POVendorListPutAwayFragment"
+        android:name="net.gbs.schneider.Ui.POVendor.PutAway.PoVendorList.POVendorListPutAwayFragment"
+        android:label="POVendorListPutAwayFragment">
+        <action
+            android:id="@+id/action_POVendorListPutAwayFragment_to_startPutAwayPOVendorFragment"
+            app:destination="@id/startPutAwayPOVendorFragment" />
+        <action
+            android:id="@+id/action_POVendorListPutAwayFragment_to_vendorInvoiceDetailsListFragment"
+            app:destination="@id/vendorInvoiceDetailsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startAuditFragment"
+        android:name="net.gbs.schneider.Ui.Audit.StartAudit.StartAuditFragment"
+        android:label="fragment_start_audit"
+        tools:layout="@layout/fragment_start_audit" />
+    <action
+        android:id="@+id/action_invoiceListPutAwayFragment_to_startPutAwayFragment"
+        app:destination="@id/startPutAwayFragment" />
+    <action
+        android:id="@+id/action_auditOrdersListFragment_to_startAuditFragment"
+        app:destination="@id/startAuditFragment" />
+    <fragment
+        android:id="@+id/invoiceListReturnFragment"
+        android:name="net.gbs.schneider.Ui.Return.Receive.InvoiceList.InvoiceListReturnFragment"
+        android:label="fragment_invoice_list_return"
+        tools:layout="@layout/fragment_invoice_list_return">
+        <action
+            android:id="@+id/action_invoiceListReturnFragment_to_startReturnFragment"
+            app:destination="@id/startReturnFragment" />
+        <action
+            android:id="@+id/action_invoiceListReturnFragment_to_returnWorkOrderDetailsListFragment"
+            app:destination="@id/returnWorkOrderDetailsListFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_PO_InvoiceListFragment_to_invoiceDetailsListFragment"
+        app:destination="@id/invoiceDetailsListFragment" />
+    <fragment
+        android:id="@+id/POVendorListFragment"
+        android:name="net.gbs.schneider.Ui.POVendor.Receiving.PoVendorList.POVendorListFragment"
+        android:label="fragment_p_o_vendor_list"
+        tools:layout="@layout/fragment_p_o_vendor_list">
+        <action
+            android:id="@+id/action_POVendorListFragment_to_POVendorStartReceivingFragment"
+            app:destination="@id/POVendorStartReceivingFragment" />
+        <action
+            android:id="@+id/action_POVendorListFragment_to_vendorInvoiceDetailsListFragment"
+            app:destination="@id/vendorInvoiceDetailsListFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_changeSerialsPO_InvoiceListFragment_to_startChangingQtyFragment"
+        app:destination="@id/startChangingQtyFragment" />
+    <fragment
+        android:id="@+id/auditOrdersListFragment"
+        android:name="net.gbs.schneider.Ui.Audit.AuditOrdersList.AuditOrdersListFragment"
+        android:label="fragment_audit_orders_list"
+        tools:layout="@layout/fragment_audit_orders_list">
+        <action
+            android:id="@+id/action_auditOrdersListFragment_to_startAuditFragment"
+            app:destination="@id/startAuditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/returnWorkOrderDetailsListFragment"
+        android:name="net.gbs.schneider.Ui.Return.ReturnWorkOrderDetails.ReturnWorkOrderDetailsListFragment"
+        android:label="fragment_return_work_order_details_list"
+        tools:layout="@layout/fragment_return_work_order_details_list" />
+    <fragment
+        android:id="@+id/POVendorStartReceivingFragment"
+        android:name="net.gbs.schneider.Ui.POVendor.Receiving.PoVendorStartReceiving.POVendorStartReceivingFragment"
+        android:label="fragment_p_o_vendor_start_receiving"
+        tools:layout="@layout/fragment_p_o_vendor_start_receiving" />
+    <fragment
+        android:id="@+id/returnMenuFragment"
+        android:name="net.gbs.schneider.Ui.Return.ReturnMenuFragment"
+        android:label="fragment_return_menu"
+        tools:layout="@layout/fragment_return_menu">
+        <action
+            android:id="@+id/action_returnMenuFragment_to_invoiceListReturnFragment"
+            app:destination="@id/invoiceListReturnFragment" />
+        <action
+            android:id="@+id/action_returnMenuFragment_to_putAwayInvoiceListReturnFragment"
+            app:destination="@id/putAwayInvoiceListReturnFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_POVendorListPutAwayFragment_to_startPutAwayPOVendorFragment"
+        app:destination="@id/startPutAwayPOVendorFragment" />
+    <action
+        android:id="@+id/action_invoiceListPutAwayFragment_to_fastPutAwayFragment"
+        app:destination="@id/fastPutAwayFragment" />
+    <action
+        android:id="@+id/action_workOrderListFragment_to_issueWorkOrderDetailsListFragment"
+        app:destination="@id/issueWorkOrderDetailsListFragment" />
+    <fragment
+        android:id="@+id/changeSerialsPO_InvoiceListFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.ChangeSerials.ChangeSerialsPoPlantInvoicesList.ChangeSerialsPO_InvoiceListFragment"
+        android:label="ChangeSerialsPO_InvoiceListFragment">
+        <action
+            android:id="@+id/action_changeSerialsPO_InvoiceListFragment_to_startChangingSerialsFragment"
+            app:destination="@id/startChangingSerialsFragment" />
+        <action
+            android:id="@+id/action_changeSerialsPO_InvoiceListFragment_to_startChangingQtyFragment"
+            app:destination="@id/startChangingQtyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/invoiceListPutAwayFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.PutAway.InvoiceListPutAway.InvoiceListPutAwayFragment"
+        android:label="fragment_invoice_list_put_away"
+        tools:layout="@layout/fragment_invoice_list_put_away">
+        <action
+            android:id="@+id/action_invoiceListPutAwayFragment_to_startPutAwayFragment"
+            app:destination="@id/startPutAwayFragment" />
+        <action
+            android:id="@+id/action_invoiceListPutAwayFragment_to_fastPutAwayFragment"
+            app:destination="@id/fastPutAwayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/invoiceDetailsListFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.POPlant.InvoiceList.InvoiceDetailsList.InvoiceDetailsListFragment"
+        android:label="fragment_invoice_details_list"
+        tools:layout="@layout/fragment_invoice_details_list" />
+    <fragment
+        android:id="@+id/startPutAwayFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.PutAway.StartPutAway.StartPutAwayFragment.StartPutAwayFragment.StartPutAwayFragment.StartPutAwayFragment"
+        android:label="fragment_start_put_away"
+        tools:layout="@layout/fragment_start_put_away" />
+    <fragment
+        android:id="@+id/PO_InvoiceListFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.POPlant.InvoiceList.PO_InvoiceListFragment"
+        android:label="fragment_p_o__invoice_list"
+        tools:layout="@layout/fragment_p_o__invoice_list">
+        <action
+            android:id="@+id/action_PO_InvoiceListFragment_to_startReceivingFragment"
+            app:destination="@id/startReceivingFragment" />
+        <action
+            android:id="@+id/action_PO_InvoiceListFragment_to_invoiceDetailsListFragment"
+            app:destination="@id/invoiceDetailsListFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_POVendorListFragment_to_POVendorStartReceivingFragment"
+        app:destination="@id/POVendorStartReceivingFragment" />
+
+    <action
+        android:id="@+id/action_POVendorListFragment_to_vendorInvoiceDetailsListFragment"
+        app:destination="@id/vendorInvoiceDetailsListFragment" />
+    <action
+        android:id="@+id/action_issueMenuFragment_to_workOrderListFragment"
+        app:destination="@id/workOrderListFragment" />
+    <action
+        android:id="@+id/action_returnMenuFragment_to_putAwayInvoiceListReturnFragment"
+        app:destination="@id/putAwayInvoiceListReturnFragment" />
+    <action
+        android:id="@+id/action_putAwayInvoiceListReturnFragment_to_startPutAwayReturnFragment2"
+        app:destination="@id/startPutAwayReturnFragment2" />
+    <fragment
+        android:id="@+id/issueMenuFragment"
+        android:name="net.gbs.schneider.Ui.Issue.IssueMenuFragment"
+        android:label="fragment_issue_menu"
+        tools:layout="@layout/fragment_issue_menu">
+        <action
+            android:id="@+id/action_issueMenuFragment_to_workOrderListFragment"
+            app:destination="@id/workOrderListFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_changeSerialsPO_InvoiceListFragment_to_startChangingSerialsFragment"
+        app:destination="@id/startChangingSerialsFragment" />
+    <fragment
+        android:id="@+id/POVendorMenuFragment"
+        android:name="net.gbs.schneider.Ui.POVendor.POVendorMenuFragment"
+        android:label="POVendorMenuFragment">
+        <action
+            android:id="@+id/action_POVendorMenuFragment_to_POVendorListFragment"
+            app:destination="@id/POVendorListFragment" />
+        <action
+            android:id="@+id/action_POVendorMenuFragment_to_POVendorListPutAwayFragment"
+            app:destination="@id/POVendorListPutAwayFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_POPlantMenuFragment_to_PO_InvoiceListFragment"
+        app:destination="@id/PO_InvoiceListFragment" />
+    <action
+        android:id="@+id/action_workOrderListFragment_to_startIssueingFragment"
+        app:destination="@id/startIssueingFragment" />
+    <action
+        android:id="@+id/action_invoiceListReturnFragment_to_returnWorkOrderDetailsListFragment"
+        app:destination="@id/returnWorkOrderDetailsListFragment" />
+    <fragment
+        android:id="@+id/startChangingQtyFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.ChangeSerials.ChangeQty.StartChangingSerialsFragment.StartChangingQtyFragment"
+        android:label="StartChangingQtyFragment" />
+    <fragment
+        android:id="@+id/workOrderListFragment"
+        android:name="net.gbs.schneider.Ui.Issue.WorkOrderList.WorkOrderListFragment"
+        android:label="fragment_work_order_list"
+        tools:layout="@layout/fragment_work_order_list">
+        <action
+            android:id="@+id/action_workOrderListFragment_to_startIssueingFragment"
+            app:destination="@id/startIssueingFragment" />
+        <action
+            android:id="@+id/action_workOrderListFragment_to_issueWorkOrderDetailsListFragment"
+            app:destination="@id/issueWorkOrderDetailsListFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_POPlantMenuFragment_to_invoiceListPutAwayFragment"
+        app:destination="@id/invoiceListPutAwayFragment" />
+    <fragment
+        android:id="@+id/startIssueingFragment"
+        android:name="net.gbs.schneider.Ui.Issue.StartIssuing.StartIssuingFragment"
+        android:label="fragment_start_issueing"
+        tools:layout="@layout/fragment_start_issueing" />
+    <action
+        android:id="@+id/action_POVendorMenuFragment_to_POVendorListFragment"
+        app:destination="@id/POVendorListFragment" />
+    <fragment
+        android:id="@+id/startReceivingFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.POPlant.InvoiceList.StartReceiving.StartReceivingFragment"
+        android:label="fragment_start_receiving"
+        tools:layout="@layout/fragment_start_receiving" />
+    <fragment
+        android:id="@+id/startPutAwayReturnFragment2"
+        android:name="net.gbs.schneider.Ui.Return.PutAway.StartPutAwayReturn.StartPutAwayReturnFragment"
+        android:label="StartPutAwayReturnFragment" />
+    <fragment
+        android:id="@+id/vendorInvoiceDetailsListFragment"
+        android:name="net.gbs.schneider.Ui.POVendor.PoVendorDetailsList.VendorInvoiceDetailsListFragment"
+        android:label="fragment_vendor_invoice_details_list"
+        tools:layout="@layout/fragment_vendor_invoice_details_list" />
+    <fragment
+        android:id="@+id/startReturnFragment"
+        android:name="net.gbs.schneider.Ui.Return.Receive.StartReturn.StartReturnFragment"
+        android:label="fragment_start_inspection"
+        tools:layout="@layout/fragment_start_inspection" />
+    <fragment
+        android:id="@+id/fastPutAwayFragment"
+        android:name="net.gbs.schneider.Ui.POPlant.Receiving.PutAway.FastPutAway.FastPutAwayFragment"
+        android:label="fragment_fast_put_away"
+        tools:layout="@layout/fragment_fast_put_away" />
+    <action
+        android:id="@+id/action_returnMenuFragment_to_invoiceListReturnFragment"
+        app:destination="@id/invoiceListReturnFragment" />
+</navigation>

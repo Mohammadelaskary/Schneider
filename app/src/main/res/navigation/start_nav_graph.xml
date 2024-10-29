@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="net.gbs.schneider.SignIn.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:enterAnim="@anim/push_right_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_right_in"
+            app:popExitAnim="@anim/push_up_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="net.gbs.schneider.SignIn.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_mainMainMenuFragment"
+            app:destination="@id/mainMainMenuFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/mainMainMenuFragment"
+        android:name="net.gbs.schneider.Ui.Menus.MainMainMenuFragment"
+        android:label="fragment_main_main_menu"
+        tools:layout="@layout/fragment_main_main_menu" >
+        <action
+            android:id="@+id/action_mainMainMenuFragment_to_main_warehouse_nav_graph"
+            app:destination="@id/main_warehouse_nav_graph" />
+        <action
+            android:id="@+id/action_mainMainMenuFragment_to_intermediate_warehouse_nav_graph"
+            app:destination="@id/intermediate_warehouse_nav_graph" />
+        <action
+            android:id="@+id/action_mainMainMenuFragment_to_binInfoFragment2"
+            app:destination="@id/binInfoFragment2" />
+        <action
+            android:id="@+id/action_mainMainMenuFragment_to_itemInfoFragment2"
+            app:destination="@id/itemInfoFragment2" />
+        <action
+            android:id="@+id/action_mainMainMenuFragment_to_serialInfoFragment2"
+            app:destination="@id/serialInfoFragment2" />
+    </fragment>
+    <include app:graph="@navigation/main_warehouse_nav_graph" />
+    <include app:graph="@navigation/intermediate_warehouse_nav_graph" />
+    <fragment
+        android:id="@+id/binInfoFragment2"
+        android:name="net.gbs.schneider.Ui.GetBinInfo.BinInfoFragment"
+        android:label="fragment_bin_info"
+        tools:layout="@layout/fragment_bin_info" />
+    <fragment
+        android:id="@+id/itemInfoFragment2"
+        android:name="net.gbs.schneider.Ui.GetItemInfo.ItemInfoFragment"
+        android:label="fragment_item_info"
+        tools:layout="@layout/fragment_item_info" />
+    <fragment
+        android:id="@+id/serialInfoFragment2"
+        android:name="net.gbs.schneider.Ui.GetSerialInfo.SerialInfoFragment"
+        android:label="fragment_serial_info"
+        tools:layout="@layout/fragment_serial_info" />
+
+</navigation>

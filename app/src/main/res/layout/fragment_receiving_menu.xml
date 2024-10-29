@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="net.gbs.schneider.Ui.POPlant.Receiving.ReceivingMenuFragment">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/po_vendor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/po_vendor" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/po_plant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/po_plant" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/put_away"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:visibility="gone"
+        android:text="@string/put_away" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/inspection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:visibility="gone"
+        android:text="@string/inspection" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/receiving_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/receiving_report" />
+
+</LinearLayout>

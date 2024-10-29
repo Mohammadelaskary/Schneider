@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".Ui.POVendor.POVendorMenuFragment">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/change_serials"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/change_serials_qty" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/receive" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/put_away"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cornerRadius="20dp"
+        android:text="@string/put_away" />
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="page_padding">16dp</dimen>
+    <dimen name="between_views_margin">16dp</dimen>
+    <dimen name="button_radius">30dp</dimen>
+    <dimen name="recycler_view_items_margin">5dp</dimen>
+</resources>
